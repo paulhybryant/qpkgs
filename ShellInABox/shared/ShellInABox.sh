@@ -12,6 +12,7 @@ case "$1" in
         echo "$QPKG_NAME is disabled."
         exit 1
     fi
+    /bin/ln -sf $QPKG_ROOT/shellinaboxd /usr/bin/shellinaboxd
     /usr/bin/shellinaboxd -p 8008 -b -t --localhost-only -s /miwifi:SSH:192.168.31.1 -s /:LOGIN
     ;;
 
